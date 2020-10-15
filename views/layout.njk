@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% block head %}
+    <title>Gustavo Azevedo</title>
+
+    {% endblock %}
+    <link rel="stylesheet" href="/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Nunito&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class=" bg-purple container-menu">
+            <ul class="text-center menu-link">
+                <li class=" item-menu line-down "><a class=" p-menu" href="/">Sobre</a></li>
+                <li class=" item-menu "><a class=" p-menu" href="/portfolio">Trabalhos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+</body>
+
+</html>

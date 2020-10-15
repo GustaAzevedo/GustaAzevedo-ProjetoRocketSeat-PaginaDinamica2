@@ -1,0 +1,54 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Portfólio - Gustavo Azevedo</title>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class=" my-5 text-center">
+            <h1 class=" text-white title">Trabalhos</h1>
+        </div>
+
+        <div id="trabalhos" class=" text-white kards ">
+
+            {% for item in items%}
+                <div class=" kard" id="{{item.id}}">
+                    <div class="kard-container">
+                        <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="imagem de {{item.title}}">
+                    </div>
+                    <div class=" kard-content">
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div class=" kard-info">
+                        <p>{{item.duration}}</p>
+                        <p class=" kard-price">{{item.price}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="modall-overlay">
+            <div class="modall">
+                <a class=" close-modall">
+                    <i class=" icon-modall material-icons">close</i>
+                </a>
+                <div class=" modall-content">
+                    <!----------------------------- VIDEO AQUI --------------------------------------------->
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-menu menu-footer bg-purple mt-5">
+        <div class="line-down text-center ">
+            <a class=" mx-3" href="https://bitbucket.org/GustaAzevedo/" target=" blank">Bitbucket</a>
+            <a class=" mx-3" href="https://www.linkedin.com/in/gustavo-azevedo-6384821b6/" target="blank">Linkedin</a>
+            <a class=" mx-3 " href="https://www.instagram.com/gusta.azevdo/" target="blank">Instagram</a>
+        </div>
+
+    </footer>
+    <script src="./script.js"></script>
+{% endblock %}

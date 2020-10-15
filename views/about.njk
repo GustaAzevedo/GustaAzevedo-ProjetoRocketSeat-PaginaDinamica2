@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre - Gustavo Azevedo</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <section id="sobre" class="sobre">
+        <div class=" my-5 text-center">
+            <img class=" mb-3 img-sobre" src="{{about.avatar_url}}" alt="gustavo azevedo">
+            <h1 class=" mb-2 title">{{about.name}}</h1>
+            <h2 class=" mb-2 sub-title">{{about.role}}</h2>
+            <p class=" description text-white">{{about.description}}</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class=" p-menu menu-footer bg-purple ">
+    <div class=" text-center line-down">
+        {% for link in about.links %}
+            <a class="mx-3" href="{{link.url}}" target="blank">{{link.name}}</a>
+        {% endfor %}
+    </div>
+
+</footer>
+{% endblock %}
